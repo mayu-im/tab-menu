@@ -1,0 +1,39 @@
+.tab-container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.tab-container ul li {
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.tab-container ul li.selected {
+  color: white;
+  background-color: rgb(255, 94, 0);
+}
+
+/* selectedクラスが付いたコンテンツのみ表示。 */
+.tab-content.selected {
+  display: block;
+  border: 2px solid rgb(255, 94, 0);
+  padding: 8px;
+  min-height: 200px;
+}
+
+/* 選択されていないタブは、カーソルをポインター表示にする。*/
+.tab-container ul li:not(.selected) {
+  cursor: pointer;
+}
+
+/* 選択されていないタブは、ホバー時に半透明にする。*/
+.tab-container ul li:not(.selected):hover {
+  opacity: 0.6;
+}
+
+/* コンテンツを非表示。 */
+.tab-content {
+  display: none;
+}
